@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Mi Página - Restaurante m.m</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="eytey.js">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container nav">
+    <nav aria-label="Principal">
+        <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="nosotro-section/sobre-nosostros.html">Sobre Nosotros</a></li>
+        <li><a href="../contacto/contacto.html">Contacto</a></li>
+        <li><a href="#pedido">Pedido</a></li>
+        <li><a class="btn" href="#reservar">Reservar</a></li>
+        </ul>
+                <img src="../img/logo-transparent.png" alt="" class="logo-transparent">
+    </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section id="inicio" class="hero">
+    <div class="hero-media">
+    <img src="img/daniela-RELOvb0rrCE-unsplash.jpg" alt="Muslos de pollo dorados con ensalada y tomates"/>
+    <div class="container hero-content">
+        <h1>Descubre nuestros<br>sabores</h1>
+        <p>Recetas caseras, ingredientes frescos y el toque de la casa.</p>
+        <a href="#menu" class="btn">Ver Menú</a>
+    </div>
+    </div>
+</section>
+
+<!-- Menú -->
+<section id="menu" class="container">
+    <h2 class="section-title">Nuestro Menú</h2>
+    <div class="tabs">
+    <button class="tab" aria-selected="true" data-filter="todos">Entradas</button>
+    <button class="tab" data-filter="platos">Platos principales</button>
+    <button class="tab" data-filter="postres">Postres</button>
+    <button class="tab" data-filter="bebidas">Bebidas</button>
+    </div>
+    <div class="grid" id="grid">
+
+
+<!-- Ensalada César -->
+
+
+    <article class="card col-6" data-cat="todos platos">
+        <div class="card-media">
+        <img src="img/ensalda cesar.jpeg" alt="Ensalada César con crutones" />
+        </div>
+        <div class="card-body">
+        <h3>Ensalada César</h3>
+        <p>Lechuga romana, crutones, queso parmesano y aderezo de la casa.</p>
+        <div class="card-actions">
+            <span class="price">$12.99</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- Filete de Res -->
+
+
+    <article class="card col-6" data-cat="platos">
+        <div class="card-media">
+        <img src="img/filete de rez.jpeg" alt="Filete de res a la parrilla con ensalada" />
+        </div>
+        <div class="card-body">
+        <h3>Filete de Res</h3>
+        <p>Corte angus en reducción de vino tinto, con papas rústicas.</p>
+        <div class="card-actions">
+            <span class="price">$24.99</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- Pasta Alfredo -->
+
+
+    <article class="card col-6" data-cat="platos">
+        <div class="card-media">
+        <img src="img/pasta alfredo.jpeg" alt="Plato de pasta Alfredo cremosa" />
+        </div>
+        <div class="card-body">
+        <h3>Pasta Alfredo</h3>
+        <p>Fettuccine en salsa cremosa de queso con toque de nuez moscada.</p>
+        <div class="card-actions">
+            <span class="price">$15.50</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- Tarta de Chocolate -->
+
+
+    <article class="card col-6" data-cat="postres">
+        <div class="card-media">
+        <img src="img/tarta de chocolate.jpeg" alt="Tarta de chocolate oscuro" />
+        </div>
+        <div class="card-body">
+        <h3>Tarta de Chocolate</h3>
+        <p>Bizcocho húmedo 70% cacao con ganache sedoso y menta.</p>
+        <div class="card-actions">
+            <span class="price">$7.90</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- milanesa -->
+
+
+<article class="card col-6" data-cat="todos platos"> 
+<div class="card-media">
+    <img src="img/milanesa.jpeg" alt="Milanesa de pollo con guarnición" />
+</div>
+<div class="card-body">
+    <h3>Milanesa de Pollo</h3>
+    <p>Filete de pollo empanizado y frito, acompañado de puré de papas y ensalada fresca.</p>
+    <div class="card-actions">
+    <span class="price">$14.99</span>
+    <button class="btn ghost" data-add>Agregar al pedido</button>
+    </div>
+</div>
+</article>
+
+
+<!-- Flan Casero -->
+
+
+<article class="card col-6" data-cat="todos postres"> 
+<div class="card-media">
+    <img src="img/flan.jpeg" alt="Flan casero con caramelo" />
+</div>
+<div class="card-body">
+    <h3>Flan Casero</h3>
+    <p>Clásico postre de huevo con caramelo líquido y un toque de crema.</p>
+    <div class="card-actions">
+    <span class="price">$5.99</span>
+    <button class="btn ghost" data-add>Agregar al pedido</button>
+    </div>
+</div>
+</article>
+
+<!-- gasiosa colo -->
+
+<article class="card col-6" data-cat="todos bebidas"> 
+<div class="card-media">
+    <img src="img/cocacola gasiosa.jpeg" alt="Vaso de gaseosa cola con hielo" />
+</div>
+<div class="card-body">
+    <h3>Gaseosa Cola</h3>
+    <p>Bebida gaseosa sabor cola servida fría con hielo.</p>
+    <div class="card-actions">
+    <span class="price">$2.99</span>
+    <button class="btn ghost" data-add>Agregar al pedido</button>
+    </div>
+</div>
+</article>
+
+
+<!-- Limonada -->
+
+
+    <article class="card col-6" data-cat="bebidas">
+        <div class="card-media">
+        <img src="img/limonada.jpeg" alt="Vaso de limonada con hielo" />
+        </div>
+        <div class="card-body">
+        <h3>Limonada</h3>
+        <p>Limonada natural con toque de hierbabuena. Refrescante.</p>
+        <div class="card-actions">
+            <span class="price">$3.50</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- Tiramisú -->
+
+
+    <article class="card col-6" data-cat="postres">
+        <div class="card-media">
+        <img src="img/tiramisú.jpeg" alt="Porción de tiramisú espolvoreado con cacao" />
+        </div>
+        <div class="card-body">
+        <h3>Tiramisú</h3>
+        <p>Clásico italiano con mascarpone, espresso y cacao amargo.</p>
+        <div class="card-actions">
+            <span class="price">$6.90</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+
+<footer id="contacto">
+    <div class="container footer-inner">
+    <div class="brand">
+        <strong>m.m</strong>
+    </div>
+    <p class="small">© <span id="year"></span> m.m Restaurante. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
