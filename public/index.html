@@ -1,89 +1,230 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Mi Página - Restaurante m.m</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="eytey.js">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container nav">
+    <nav aria-label="Principal">
+        <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="nosotro-section/sobre-nosostros.html">Sobre Nosotros</a></li>
+        <li><a href="../contacto/contacto.html">Contacto</a></li>
+        <li><a href="#pedido">Pedido</a></li>
+        <li><a class="btn" href="#reservar">Reservar</a></li>
+        </ul>
+                <img src="../img/logo-transparent.png" alt="" class="logo-transparent">
+    </nav>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+</header>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+<!-- Hero -->
+<section id="inicio" class="hero">
+    <div class="hero-media">
+    <img src="img/daniela-RELOvb0rrCE-unsplash.jpg" alt="Muslos de pollo dorados con ensalada y tomates"/>
+    <div class="container hero-content">
+        <h1>Descubre nuestros<br>sabores</h1>
+        <p>Recetas caseras, ingredientes frescos y el toque de la casa.</p>
+        <a href="#menu" class="btn">Ver Menú</a>
+    </div>
+    </div>
+</section>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+<!-- Menú -->
+<section id="menu" class="container">
+    <h2 class="section-title">Nuestro Menú</h2>
+    <div class="tabs">
+    <button class="tab" aria-selected="true" data-filter="todos">Entradas</button>
+    <button class="tab" data-filter="platos">Platos principales</button>
+    <button class="tab" data-filter="postres">Postres</button>
+    <button class="tab" data-filter="bebidas">Bebidas</button>
+    </div>
+    <div class="grid" id="grid">
+
+
+<!-- Ensalada César -->
+
+
+    <article class="card col-6" data-cat="todos platos">
+        <div class="card-media">
+        <img src="img/ensalda cesar.jpeg" alt="Ensalada César con crutones" />
+        </div>
+        <div class="card-body">
+        <h3>Ensalada César</h3>
+        <p>Lechuga romana, crutones, queso parmesano y aderezo de la casa.</p>
+        <div class="card-actions">
+            <span class="price">$12.99</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- Filete de Res -->
+
+
+    <article class="card col-6" data-cat="platos">
+        <div class="card-media">
+        <img src="img/filete de rez.jpeg" alt="Filete de res a la parrilla con ensalada" />
+        </div>
+        <div class="card-body">
+        <h3>Filete de Res</h3>
+        <p>Corte angus en reducción de vino tinto, con papas rústicas.</p>
+        <div class="card-actions">
+            <span class="price">$24.99</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- Pasta Alfredo -->
+
+
+    <article class="card col-6" data-cat="platos">
+        <div class="card-media">
+        <img src="img/pasta alfredo.jpeg" alt="Plato de pasta Alfredo cremosa" />
+        </div>
+        <div class="card-body">
+        <h3>Pasta Alfredo</h3>
+        <p>Fettuccine en salsa cremosa de queso con toque de nuez moscada.</p>
+        <div class="card-actions">
+            <span class="price">$15.50</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- Tarta de Chocolate -->
+
+
+    <article class="card col-6" data-cat="postres">
+        <div class="card-media">
+        <img src="img/tarta de chocolate.jpeg" alt="Tarta de chocolate oscuro" />
+        </div>
+        <div class="card-body">
+        <h3>Tarta de Chocolate</h3>
+        <p>Bizcocho húmedo 70% cacao con ganache sedoso y menta.</p>
+        <div class="card-actions">
+            <span class="price">$7.90</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- milanesa -->
+
+
+<article class="card col-6" data-cat="todos platos"> 
+<div class="card-media">
+    <img src="img/milanesa.jpeg" alt="Milanesa de pollo con guarnición" />
+</div>
+<div class="card-body">
+    <h3>Milanesa de Pollo</h3>
+    <p>Filete de pollo empanizado y frito, acompañado de puré de papas y ensalada fresca.</p>
+    <div class="card-actions">
+    <span class="price">$14.99</span>
+    <button class="btn ghost" data-add>Agregar al pedido</button>
+    </div>
+</div>
+</article>
+
+
+<!-- Flan Casero -->
+
+
+<article class="card col-6" data-cat="todos postres"> 
+<div class="card-media">
+    <img src="img/flan.jpeg" alt="Flan casero con caramelo" />
+</div>
+<div class="card-body">
+    <h3>Flan Casero</h3>
+    <p>Clásico postre de huevo con caramelo líquido y un toque de crema.</p>
+    <div class="card-actions">
+    <span class="price">$5.99</span>
+    <button class="btn ghost" data-add>Agregar al pedido</button>
+    </div>
+</div>
+</article>
+
+<!-- gasiosa colo -->
+
+<article class="card col-6" data-cat="todos bebidas"> 
+<div class="card-media">
+    <img src="img/cocacola gasiosa.jpeg" alt="Vaso de gaseosa cola con hielo" />
+</div>
+<div class="card-body">
+    <h3>Gaseosa Cola</h3>
+    <p>Bebida gaseosa sabor cola servida fría con hielo.</p>
+    <div class="card-actions">
+    <span class="price">$2.99</span>
+    <button class="btn ghost" data-add>Agregar al pedido</button>
+    </div>
+</div>
+</article>
+
+
+<!-- Limonada -->
+
+
+    <article class="card col-6" data-cat="bebidas">
+        <div class="card-media">
+        <img src="img/limonada.jpeg" alt="Vaso de limonada con hielo" />
+        </div>
+        <div class="card-body">
+        <h3>Limonada</h3>
+        <p>Limonada natural con toque de hierbabuena. Refrescante.</p>
+        <div class="card-actions">
+            <span class="price">$3.50</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+
+
+<!-- Tiramisú -->
+
+
+    <article class="card col-6" data-cat="postres">
+        <div class="card-media">
+        <img src="img/tiramisú.jpeg" alt="Porción de tiramisú espolvoreado con cacao" />
+        </div>
+        <div class="card-body">
+        <h3>Tiramisú</h3>
+        <p>Clásico italiano con mascarpone, espresso y cacao amargo.</p>
+        <div class="card-actions">
+            <span class="price">$6.90</span>
+            <button class="btn ghost" data-add>Agregar al pedido</button>
+        </div>
+        </div>
+    </article>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+
+<footer id="contacto">
+    <div class="container footer-inner">
+    <div class="brand">
+        <strong>m.m</strong>
+    </div>
+    <p class="small">© <span id="year"></span> m.m Restaurante. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
