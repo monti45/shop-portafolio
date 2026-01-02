@@ -22,6 +22,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: top 0.3s ease-in-out;
 }
 nav {
   display: flex;
@@ -221,4 +222,48 @@ footer .brand {
 footer p.small {
   font-size: 0.9rem;
   color: #555;
+}
+/* Botón hamburguesa oculto en escritorio */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Fix del nav en general */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #f6f0e8;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links .btn {
+    width: 100%;
+    text-align: center;
+  }
 }

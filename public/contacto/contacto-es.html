@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../contacto/contacto.(css)">
+    <link rel="stylesheet" href="../eytey.(js)">
+    <title>Document</title>
+</head>
+<body>
+    <!--nav bar-->
+<header>
+    <div class="container nav">
+<nav aria-label="Principal">
+  <ul>
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="../index.html">Menú</a></li>
+    <li><a href="../nosotro-section/sobre-nosostros.html">Sobre nosotros</a></li>
+    <li><a class="btn" href="../index.html">Reservar</a></li>
+  </ul>
+  <img src="../img/logo-transparent.png" alt="" class="logo-transparent">
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+    </div>
+</header>
+<section id="contacto">
+    <div class="container contacto">
+        <h2>Contáctanos</h2>
+<form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="8616190d-2568-43bc-94bb-e9309c34b72b">
+
+    <input type="text" name="name" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Correo Electrónico" required>
+    <textarea name="message" placeholder="Mensaje" required></textarea>
+
+    <button class="btn ghost" type="submit">Enviar</button>
+</form>
+
+    </div>
+    <script src="contacto.js"></script>
+</body>
+</html>

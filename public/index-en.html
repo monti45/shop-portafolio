@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>My Page – m.m Restaurant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="eytey.js">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container nav">
+        <nav aria-label="Main navigation">
+            <img src="./img/logo-transparent.png" alt="Restaurant logo" class="logo-transparent">
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="nosotro-section/sobre-nosostros.html">About Us</a></li>
+                <li><a href="../contacto/contacto.html">Contact</a></li>
+                <li><a href="#pedido">Order</a></li>
+                <li><a class="btn" href="#reservar">Reserve</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Hero -->
+<section id="inicio" class="hero">
+    <div class="hero-media">
+        <img src="img/daniela-RELOvb0rrCE-unsplash.jpg" alt="Golden chicken thighs with salad and tomatoes"/>
+        <div class="container hero-content">
+            <h1>Discover our<br>flavors</h1>
+            <p>Homemade recipes, fresh ingredients, and our special touch.</p>
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+    </div>
+</section>
+<!-- Menu -->
+<section id="menu" class="container">
+    <h2 class="section-title">Our Menu</h2>
+    <div class="tabs">
+        <button class="tab" aria-selected="true" data-filter="todos">Starters</button>
+        <button class="tab" data-filter="platos">Main Dishes</button>
+        <button class="tab" data-filter="postres">Desserts</button>
+        <button class="tab" data-filter="bebidas">Drinks</button>
+    </div>
+    <div class="grid" id="grid">
+        <!-- Caesar Salad -->
+        <article class="card col-6" data-cat="todos platos">
+            <div class="card-media">
+                <img src="img/ensalda cesar.jpeg" alt="Caesar salad with croutons" />
+            </div>
+            <div class="card-body">
+                <h3>Caesar Salad</h3>
+                <p>Romaine lettuce, croutons, parmesan cheese, and house dressing.</p>
+                <div class="card-actions">
+                    <span class="price">$12.99</span>
+                    <button class="btn ghost" data-add>Add to Order</button>
+                </div>
+            </div>
+        </article>
+        <!-- Beef Steak -->
+        <article class="card col-6" data-cat="platos">
+            <div class="card-media">
+                <img src="img/filete de rez.jpeg" alt="Grilled beef steak with salad" />
+            </div>
+            <div class="card-body">
+                <h3>Beef Steak</h3>
+                <p>Angus cut in red wine reduction, served with rustic potatoes.</p>
+                <div class="card-actions">
+                    <span class="price">$24.99</span>
+                    <button class="btn ghost" data-add>Add to Order</button>
+                </div>
+            </div>
+        </article>
+        <!-- Alfredo Pasta -->
+        <article class="card col-6" data-cat="platos">
+            <div class="card-media">
+                <img src="img/mikey-frost-5WsYzH1_nGk-unsplash (1).jpg" alt="Creamy Alfredo pasta dish" />
+            </div>
+            <div class="card-body">
+                <h3>Alfredo Pasta</h3>
+                <p>Fettuccine in a creamy cheese sauce with a hint of nutmeg.</p>
+                <div class="card-actions">
+                    <span class="price">$15.50</span>
+                    <button class="btn ghost" data-add>Add to Order</button>
+                </div>
+            </div>
+        </article>
+        <!-- Chocolate Cake -->
+        <article class="card col-6" data-cat="postres">
+            <div class="card-media">
+                <img src="img/Tarta de Chocolate.jpeg" alt="Dark chocolate cake" />
+            </div>
+            <div class="card-body">
+                <h3>Chocolate Cake</h3>
+                <p>Moist 70% cocoa sponge with silky ganache and fresh mint.</p>
+                <div class="card-actions">
+                    <span class="price">$7.90</span>
+                    <button class="btn ghost" data-add>Add to Order</button>
+                </div>
+            </div>
+        </article>
+        <!-- Chicken Milanese -->
+        <article class="card col-6" data-cat="todos platos"> 
+            <div class="card-media">
+                <img src="img/milanesa.jpeg" alt="Chicken milanese with side dishes" />
+            </div>
+            <div class="card-body">
+                <h3>Chicken Milanese</h3>
+                <p>Breaded and fried chicken fillet, served with mashed potatoes and fresh salad.</p>
+                <div class="card-actions">
+                    <span class="price">$14.99</span>
+                    <button class="btn ghost" data-add>Add to Order</button>
+                </div>
+            </div>
+        </article>
+        <!-- Homemade Flan -->
+        <article class="card col-6" data-cat="todos postres"> 
+            <div class="card-media">
+                <img src="img/flan.jpeg" alt="Homemade flan with caramel" />
+            </div>
+            <div class="card-body">
+                <h3>Homemade Flan</h3>
+                <p>Classic egg custard with liquid caramel and a touch of cream.</p>
+                <div class="card-actions">
+                    <span class="price">$5.99</span>
+                    <button class="btn ghost" data-add>Add to Order</button>
+                </div>
+            </div>
+        </article>
+        <!-- Cola Soda -->
+        <article class="card col-6" data-cat="todos bebidas"> 
+            <div class="card-media">
+                <img src="img/cocacola gasiosa.jpeg" alt="Glass of cola soda with ice" />
+            </div>
+            <div class="card-body">
+                <h3>Cola Soda</h3>
+                <p>Chilled cola-flavored soda served with ice.</p>
+                <div class="card-actions">
+                    <span class="price">$2.99</span>
+                    <button class="btn ghost" data-add>Add to Order</button>
+                </div>
+            </div>
+        </article>
+        <!-- Lemonade -->
+        <article class="card col-6" data-cat="bebidas">
+            <div class="card-media">
+                <img src="img/francesca-hotchin-p5EiqkBYIEE-unsplash.jpg" alt="Glass of lemonade with ice" />
+            </div>
+            <div class="card-body">
+                <h3>Lemonade</h3>
+                <p>Fresh lemonade with a hint of mint. Refreshing.</p>
+                <div class="card-actions">
+                    <span class="price">$3.50</span>
+                    <button class="btn ghost" data-add>Add to Order</button>
+                </div>
+            </div>
+        </article>
+        <!-- Tiramisu -->
+        <article class="card col-6" data-cat="postres">
+            <div class="card-media">
+                <img src="img/Tiramisú.jpeg" alt="Slice of tiramisu dusted with cocoa" />
+            </div>
+            <div class="card-body">
+                <h3>Tiramisu</h3>
+                <p>Classic Italian dessert with mascarpone, espresso, and cocoa.</p>
+                <div class="card-actions">
+                    <span class="price">$6.90</span>
+                    <button class="btn ghost" data-add>Add to Order</button>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- Footer -->
+<footer id="contacto">
+    <div class="container footer-inner">
+        <div class="brand">
+            <strong>m.m</strong>
+        </div>
+        <p class="small">© <span id

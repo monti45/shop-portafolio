@@ -28,3 +28,23 @@ document.querySelectorAll('[data-add]').forEach(btn=>{
     btn.style.opacity = .8;
   });
 });
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+                         
+let lastScroll = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    // Bajando -> ocultar
+    header.style.top = '-100px';
+  } else {
+    // Subiendo -> mostrar
+    header.style.top = '0';
+  }
+
+  lastScroll = currentScroll;
+});
