@@ -8,8 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="eytey.js">
+<link rel="icon" href="./imagenes/logo-transparent.png" type="image/png">
 </head>
 <body>
+
 <!-- Header -->
 <header>
     <div class="container nav">
@@ -19,14 +21,14 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
-                <li><a href="nosotro-section/sobre-nosostros.html">About Us</a></li>
-                <li><a href="../contacto/contacto.html">Contact</a></li>
+                <li><a href="nosotro-section/sobre-nosostros-en.html">About Us</a></li>
+                <li><a href="contacto/contacto.html">Contact</a></li>
                 <li><a href="#pedido">Order</a></li>
-                <li><a class="btn" href="#reservar">Reserve</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
 <!-- Hero -->
 <section id="inicio" class="hero">
     <div class="hero-media">
@@ -38,16 +40,20 @@
         </div>
     </div>
 </section>
+
 <!-- Menu -->
 <section id="menu" class="container">
     <h2 class="section-title">Our Menu</h2>
+
     <div class="tabs">
         <button class="tab" aria-selected="true" data-filter="todos">Starters</button>
         <button class="tab" data-filter="platos">Main Dishes</button>
         <button class="tab" data-filter="postres">Desserts</button>
         <button class="tab" data-filter="bebidas">Drinks</button>
     </div>
+
     <div class="grid" id="grid">
+
         <!-- Caesar Salad -->
         <article class="card col-6" data-cat="todos platos">
             <div class="card-media">
@@ -62,6 +68,7 @@
                 </div>
             </div>
         </article>
+
         <!-- Beef Steak -->
         <article class="card col-6" data-cat="platos">
             <div class="card-media">
@@ -76,6 +83,7 @@
                 </div>
             </div>
         </article>
+
         <!-- Alfredo Pasta -->
         <article class="card col-6" data-cat="platos">
             <div class="card-media">
@@ -90,6 +98,7 @@
                 </div>
             </div>
         </article>
+
         <!-- Chocolate Cake -->
         <article class="card col-6" data-cat="postres">
             <div class="card-media">
@@ -104,6 +113,7 @@
                 </div>
             </div>
         </article>
+
         <!-- Chicken Milanese -->
         <article class="card col-6" data-cat="todos platos"> 
             <div class="card-media">
@@ -118,6 +128,7 @@
                 </div>
             </div>
         </article>
+
         <!-- Homemade Flan -->
         <article class="card col-6" data-cat="todos postres"> 
             <div class="card-media">
@@ -132,6 +143,7 @@
                 </div>
             </div>
         </article>
+
         <!-- Cola Soda -->
         <article class="card col-6" data-cat="todos bebidas"> 
             <div class="card-media">
@@ -146,6 +158,7 @@
                 </div>
             </div>
         </article>
+
         <!-- Lemonade -->
         <article class="card col-6" data-cat="bebidas">
             <div class="card-media">
@@ -160,6 +173,7 @@
                 </div>
             </div>
         </article>
+
         <!-- Tiramisu -->
         <article class="card col-6" data-cat="postres">
             <div class="card-media">
@@ -174,12 +188,20 @@
                 </div>
             </div>
         </article>
+
     </div>
 </section>
+
 <!-- Footer -->
 <footer id="contacto">
     <div class="container footer-inner">
         <div class="brand">
             <strong>m.m</strong>
         </div>
-        <p class="small">© <span id
+        <p class="small">© <span id="year"></span> m.m Restaurant. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="eytey.js"></script>
+</body>
+</html>

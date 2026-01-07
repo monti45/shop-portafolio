@@ -23,7 +23,7 @@ tabs.forEach(tab=>{
 // Botones "Agregar al pedido"
 document.querySelectorAll('[data-add]').forEach(btn=>{
   btn.addEventListener('click', ()=>{
-    btn.textContent = 'Agregado ✓';
+    btn.textContent = 'Added ✓';
     btn.disabled = true;
     btn.style.opacity = .8;
   });
@@ -31,7 +31,6 @@ document.querySelectorAll('[data-add]').forEach(btn=>{
 function toggleMenu() {
   document.querySelector(".nav-links").classList.toggle("active");
 }
-                         
 let lastScroll = 0;
 const header = document.querySelector('header');
 

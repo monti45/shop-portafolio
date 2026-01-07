@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../contacto/contacto.css">
-    <link rel="stylesheet" href="../eytey.js">
+    <link rel="stylesheet" href="./contacto.css">
     <title>Contact</title>
+    <link rel="icon" href="./imagenes/logo-transparent.png" type="image/png">
 </head>
 <body>
+
 <!-- Nav bar -->
 <header>
     <div class="container nav">
         <nav aria-label="Main navigation">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html">Menu</a></li>
-                <li><a href="../nosotro-section/sobre-nosostros.html">About Us</a></li>
-                <li><a class="btn" href="../index.html">Reserve</a></li>
+                <li><a href="../index.html#menu">Menu</a></li>
+                <li><a href="../nosotro-section/sobre-nosostros-en.html">About Us</a></li>
             </ul>
+            <!-- IMG CORRECTA -->
             <img src="../img/logo-transparent.png" alt="Restaurant logo" class="logo-transparent">
             <div class="menu-toggle" id="menu-toggle">
                 <span></span>
@@ -27,18 +28,27 @@
         </nav>
     </div>
 </header>
+
+<!-- Contact section -->
 <section id="contacto">
     <div class="container contacto">
         <h2>Contact Us</h2>
+
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="8616190d-2568-43bc-94bb-e9309c34b72b">
+
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <textarea name="message" placeholder="Message" required></textarea>
+
             <button class="btn ghost" type="submit">Send Message</button>
         </form>
     </div>
 </section>
-<script src="contacto.js"></script>
+
+<!-- JS CORRECTO -->
+<script src="./contacto.js"></script>
+<script src="../eytey.js"></script>
+
 </body>
 </html>
